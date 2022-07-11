@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/digicloud-training" mode="merge"/>
+    <filter root="/content/digicloud-training" mode="merge"/>
+    <filter root="/content/dam/digicloud-training/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/digicloud-training" mode="merge"/>
+</workspaceFilter>
