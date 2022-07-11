@@ -1,0 +1,38 @@
+
+<style>
+.cmp-content-tile {
+	width: 300px;
+	height: auto;
+}
+.cmp-content-tile .image {
+	width: 100%;
+}
+.cmp-title-desc .image {
+	display: none;
+}
+.cmp-title-desc {
+	background: red;
+}
+.cmp-title-image .desc {
+	display: none;
+}
+.cmp-title-image {
+	background: green;
+}
+.cmp-desc-image .title {
+	display: none;
+}
+</style>
+
+Content tile
+<div class="cmp-content-tile"
+	data-sly-use.tile="com.digicloud.aem.core.models.Tile">
+	<h1 class="title">${tile.heading}</h1>
+	<div class="desc">
+		<p>${tile.des}</p>
+	</div>
+	<img class="image" src="${tile.fileReference}"></img>
+</div>
+
+
+

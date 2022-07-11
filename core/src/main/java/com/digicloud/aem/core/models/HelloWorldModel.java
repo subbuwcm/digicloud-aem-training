@@ -46,11 +46,16 @@ public class HelloWorldModel {
     private ResourceResolver resourceResolver;
 
     private String message;
+    private String subHeading;
 
     @PostConstruct
     protected void init() {
         PageManager pageManager = resourceResolver.adaptTo(PageManager.class);
-        String currentPagePath = Optional.ofNullable(pageManager)
+        subHeading = currentResource.getValueMap().get("subHeading","");
+        if( null != subHeading ) {
+        	subHeading = "test"+ subHeading;
+        }
+		String currentPagePath = Optional.ofNullable(pageManager)
                 .map(pm -> pm.getContainingPage(currentResource))
                 .map(Page::getPath).orElse("");
 
@@ -61,6 +66,10 @@ public class HelloWorldModel {
 
     public String getMessage() {
         return message;
+    }
+    
+    public String getSubHeading() {
+    	return subHeading;
     }
 
 }
