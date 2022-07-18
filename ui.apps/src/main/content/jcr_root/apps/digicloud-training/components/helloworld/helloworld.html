@@ -1,3 +1,4 @@
+
 <!--/*
     Copyright 2015 Adobe Systems Incorporated
   
@@ -24,3 +25,28 @@
         <pre class="cmp-helloworld__item-output"data-cmp-hook-helloworld="model">${model.message}</pre>
     </div>
 </div>
+
+
+Implicite objects 
+	Current page: ${currentPage.path}<br>
+    Current node: ${currentNode.path}<br>
+    Current resource: ${resource.path}<br>
+    Properteis: ${properties.text} <br>
+
+
+<div> html context : ${properties.text @context='html'}</div> <br>
+
+<br> Date Formte  : ${'yyyy/MM/dd' @ format=properties['jcr:lastModified']}
+
+<!--/* <br>OR operation 
+${properties.pageTitle || properties.jcr:title || resource.name} */-->
+   <br> Formate : 
+    ${'Asset {0} out of {1}' @ format=[properties.text, pageProperties["jcr:title"]]}
+
+<p data-sly-set.testName="${properties.pageTitle || properties.jcr:title || resource.name}" data-sly-element="${'div'}" class="${resource.name @context='styleToken'} ">${pageProperties.jcr:title} -- ${testName}</p>
+
+<div data-sly-include="list-demo.html"></div>
+<section data-sly-resource="${'./tile' @ resourceType='digicloud-training/components/tile'}"></section>
+
+<sly> ${properties.text} </sly>
+
