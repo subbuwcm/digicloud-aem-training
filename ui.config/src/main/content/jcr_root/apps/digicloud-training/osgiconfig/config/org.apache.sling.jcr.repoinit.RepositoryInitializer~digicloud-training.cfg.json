@@ -2,9 +2,6 @@
     "scripts": [
         "create path (sling:OrderedFolder) /content/dam/digicloud-training",
         "create path (nt:unstructured) /content/dam/digicloud-training/jcr:content",
-        "set properties on /content/dam/digicloud-training/jcr:content",
-        "set cq:conf{String} to /conf/digicloud-training",
-        "set jcr:title{String} to \"DigiCloud AEM Training\"",
-        "end"
+        "set properties on /content/dam/digicloud-training/jcr:content\n  set cq:conf{String} to /conf/digicloud-training\n  set jcr:title{String} to \"DigiCloud AEM Training\"\nend"
     ]
 }

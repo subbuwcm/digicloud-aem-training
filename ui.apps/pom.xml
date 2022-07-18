@@ -121,6 +121,7 @@
         </dependency>
 
 
+
         <dependency>
             <groupId>com.digicloud.aem</groupId>
             <artifactId>digicloud-aem-training.ui.apps.structure</artifactId>
