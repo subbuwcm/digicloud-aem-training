@@ -1,0 +1,21 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+ 	  data-sly-call="${clientlib.css @ categories='dc.components.slingmodel.demo'}">
+</sly>
+
+Sling Model Demo
+<div data-sly-use.sldemo="com.digicloud.aem.core.models.SlingModelDemo">
+	<div class="title"> ${sldemo.title}</div>
+	<div class="description"> ${sldemo.description @context='html'}</div>
+	<div class="drop"> ${sldemo.dropdown}</div>
+	<div class="users" dat-sly-list.user="${sldemo.users}">
+		<div class="user">
+			<span>First Name</span> : <span>${user.firstName}</span><br>
+			<span>Last Name</span> : <span>${user.lastName}</span><br>
+			<hr>
+		</div>
+	</div>
+
+</div>
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+ 	  data-sly-call="${clientlib.js @ categories='dc.components.slingmodel.demo'}">
+</sly>
