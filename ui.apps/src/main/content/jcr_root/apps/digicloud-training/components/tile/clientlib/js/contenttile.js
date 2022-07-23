@@ -1,1 +1,1 @@
-alert("hai");
+console.log("hai");

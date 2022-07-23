@@ -1,1 +1,1 @@
-alert("hai from 2");
+console.log("hai from 2");
