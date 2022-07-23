@@ -3,7 +3,6 @@ package com.digicloud.aem.core.models;
 import java.util.List;
 
 public interface SlingModeldemoInterface {
-
 	String getTitle();
 
 	String getDescription();
@@ -13,5 +12,4 @@ public interface SlingModeldemoInterface {
 	String getDropwdown();
 
 	List<User> getUsers();
-
 }

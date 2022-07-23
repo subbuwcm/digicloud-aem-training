@@ -6,9 +6,7 @@ import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
-import org.apache.sling.models.annotations.Default;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Exporter;
 import org.apache.sling.models.annotations.Model;
@@ -40,7 +38,6 @@ public class SlingModelDemo {
 	@ValueMapValue
 	private String dropwdown;
 	
-	private String testSlingModalget;
 	
 	@Inject
     private List<User> users;
@@ -50,9 +47,6 @@ public class SlingModelDemo {
 		logger.info("-=-=-=-=-="+users);
 	}
 
-	public String getTestSlingModalget() {
-		return "hard coded value";
-	}
 	public String getTitle() {
 		return title;
 	}
