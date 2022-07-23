@@ -2,6 +2,7 @@ package com.digicloud.aem.core.models.impl;
 
 import java.util.List;
 
+import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 import javax.inject.Named;
 

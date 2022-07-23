@@ -6,6 +6,7 @@ import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Exporter;
@@ -45,6 +46,11 @@ public class SlingModelDemo {
 	@PostConstruct
 	protected void init() {
 		logger.info("-=-=-=-=-="+users);
+		updteTitle();
+	}
+
+	private void updteTitle() {
+		title = StringUtils.isBlank(title)? "Test Title": title;
 	}
 
 	public String getTitle() {

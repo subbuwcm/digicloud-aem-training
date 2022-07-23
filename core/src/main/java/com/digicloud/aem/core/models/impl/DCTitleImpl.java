@@ -34,10 +34,16 @@ public class DCTitleImpl implements DCTitle {
 	@ValueMapValue
 	@Via("resource")
 	private String subHeading;
+	
+	String type;
 
 	@PostConstruct
 	protected void initModel() {
 		logger.info("-=-==-=" + deligate + "===> Subheading : " + subHeading);
+		if(deligate.getType().equalsIgnoreCase("h2")) {
+			type = "h1";
+			subHeading = "added in sling modal"+subHeading;
+		}
 	}
 
 	@Override
@@ -52,7 +58,7 @@ public class DCTitleImpl implements DCTitle {
 
 	@Override
 	public String getType() {
-		return deligate.getType();
+		return type;
 	}
 
 	@Override
